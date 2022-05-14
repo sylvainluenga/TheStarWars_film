@@ -3,13 +3,16 @@ import { BrowserRouter } from 'react-router-dom';
 import Routes from './Routes';
 import './App.css'
 import styled from 'styled-components';
+import SearchProvider from './contexts/MyProvider';
 
 const App = () => (
-  <BrowserRouter>
-    <AppContainer>
-      <Routes />
-    </AppContainer>
-  </BrowserRouter>
+  <SearchProvider>
+    <BrowserRouter>
+      <AppContainer>
+        <Routes />
+      </AppContainer>
+    </BrowserRouter>
+  </SearchProvider>
 );
 
 export default App;
